@@ -1,0 +1,24 @@
+{
+  "seller": [
+    {
+      "id": "2ca2",
+      "email": "sumairhaq@carecloud.com",
+      "password": "9910"
+    },
+    {
+      "id": "3e02",
+      "email": "sumair@carecloud.com",
+      "password": "9910"
+    },
+    {
+      "id": "8d2f",
+      "email": "hassan@carecloud.com",
+      "password": "9910"
+    },
+    {
+      "id": "891c",
+      "email": "junaid@carecloud.com",
+      "password": "9910"
+    }
+  ]
+}

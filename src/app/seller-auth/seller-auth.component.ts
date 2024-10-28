@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SellerService } from '../services/seller.service'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-seller-auth',
@@ -8,7 +10,14 @@ import { Component } from '@angular/core';
 export class SellerAuthComponent {
 
 
+  constructor(public sellerService: SellerService , public router:Router) { }
+
   singUpForm(data: any) {
-    console.log(data)
+    // console.log(data)
+    this.sellerService.sellerSignup(data).subscribe((res: any) => {
+      if (res) {
+        this.router.navigate(['seller-home'])
+      }
+    })
   }
 }
