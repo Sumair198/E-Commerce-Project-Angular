@@ -22,7 +22,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
