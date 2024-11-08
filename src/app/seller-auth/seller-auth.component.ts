@@ -9,6 +9,7 @@ import { Router } from '@angular/router'
 })
 export class SellerAuthComponent {
 
+  showLogin = false
 
   constructor(public sellerService: SellerService, public router: Router) { }
 
@@ -19,5 +20,17 @@ export class SellerAuthComponent {
   singUpForm(data: any) {
     // console.log(data)
     this.sellerService.sellerSignup(data)
+  }
+  openLogin()
+  {
+    this.showLogin = true
+  }
+  openSignup()
+  {
+    this.showLogin = false
+  }
+  loginForm(data : any)
+  {
+    console.log(data)
   }
 }

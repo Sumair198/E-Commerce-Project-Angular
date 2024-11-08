@@ -1,8 +1,8 @@
-<div class="container d-flex justify-content-center">
+<div *ngIf='!showLogin' class="container d-flex justify-content-center">
 
     <div class="row">
         <div class="mt-4">
-            <h3>Sign-Up</h3>
+            <h3>Signup</h3>
         </div>
         <div class="col">
             <form #singupform='ngForm'(ngSubmit)="singUpForm(singupform.value)" >
@@ -14,7 +14,34 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" ngModel name="password" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div>
+                    <a (click)='openLogin()' class="text-primary text-decoration-none">Already have account? Click to login</a>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div *ngIf='showLogin' class="container d-flex justify-content-center">
+
+    <div class="row">
+        <div class="mt-4">
+            <h3>Login</h3>
+        </div>
+        <div class="col">
+            <form #loginform='ngForm'(ngSubmit)="loginForm(loginform.value)" >
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" ngModel id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" ngModel name="password" id="exampleInputPassword1">
+                </div>
+                <div>
+                    <a (click)='openSignup()' class="text-primary text-decoration-none">Don't have account? Click to signup</a>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
         </div>
     </div>
